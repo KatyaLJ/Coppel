@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-02-08T23:07:23.072Z",
+    "end": "2024-02-08T23:08:34.322Z",
+    "duration": 71250,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "716db9b2-9c3d-47c6-b725-42b54af07636",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec.cy.js",
+      "file": "cypress\\e2e\\spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "76d242c3-59b1-4990-a019-8f1c89f386b8",
+          "title": "template spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "passes",
+              "fullTitle": "template spec passes",
+              "timedOut": null,
+              "duration": 61192,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.coppel.com\", {\n  headers: {\n    \"Accept-Encoding\": \"gzip, deflate\"\n  }\n}).wait(30000);\ncy.get('.principal-contenido > #divBtn > #btnGuardaCambio').click({\n  force: true\n});\ncy.get('#SimpleSearchForm_SearchTerm').should('be.visible').wait(5000).type(\"carro\");\ncy.get('.submitButton').click({\n  force: true\n}).wait(20000);\ncy.get('.priceTable a.btn').first().wait(20000).click().wait(20000);\ncy.get('#WC_QuickInfo_Link_addtocart_div').wait(20000).click().wait(20000);\ncy.get('#GotoCartButton2').wait(20000).click();\ncy.request('https://www.coppel.com/AjaxLoadLocationUserView?storeId=10151&catalogId=10051&langId=-5&requesttype=ajax').then(response => {\n  expect(response.status).to.eq(200); // Verificar que el estado de la respuesta sea 200 OK\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4000ms: `cy.type()` failed because this element:\n\n`<input id=\"SimpleSearchForm_SearchTerm\" type=\"text\" name=\"searchTerm\" placeholder=\"Busca tus productos\" maxlength=\"140\" autocomplete=\"off\" onkeyup=\"handleTextDirection(this);\" oncut=\"handleTextDirection(this);\" onpaste=\"handleTextDirection(this);\">`\n\nis being covered by another element:\n\n`<div class=\"modalShipmentCityOverlay\"></div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4000ms: `cy.type()` failed because this element:\n\n`<input id=\"SimpleSearchForm_SearchTerm\" type=\"text\" name=\"searchTerm\" placeholder=\"Busca tus productos\" maxlength=\"140\" autocomplete=\"off\" onkeyup=\"handleTextDirection(this);\" oncut=\"handleTextDirection(this);\" onpaste=\"handleTextDirection(this);\">`\n\nis being covered by another element:\n\n`<div class=\"modalShipmentCityOverlay\"></div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://www.coppel.com/__cypress/runner/cypress_runner.js:111947:68)\n    at ensureDescendents (https://www.coppel.com/__cypress/runner/cypress_runner.js:111998:5)\n    at ensureDescendentsAndScroll (https://www.coppel.com/__cypress/runner/cypress_runner.js:112004:14)\n    at ensureElIsNotCovered (https://www.coppel.com/__cypress/runner/cypress_runner.js:112135:5)\n    at runAllChecks (https://www.coppel.com/__cypress/runner/cypress_runner.js:112334:52)\n    at retryActionability (https://www.coppel.com/__cypress/runner/cypress_runner.js:112371:16)\n    at tryCatcher (https://www.coppel.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://www.coppel.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://www.coppel.com/__cypress/runner/cypress_runner.js:143916:68)\n    at <unknown> (https://www.coppel.com/__cypress/runner/cypress_runner.js:143857:14)\n    at tryCatcher (https://www.coppel.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.coppel.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.coppel.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.coppel.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.coppel.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://www.coppel.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://www.coppel.com/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://coppel1/./cypress/e2e/spec.cy.js:21:75)",
+                "diff": null
+              },
+              "uuid": "b126ba53-dc5d-40e2-9e1f-deecb5be69d9",
+              "parentUUID": "76d242c3-59b1-4990-a019-8f1c89f386b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b126ba53-dc5d-40e2-9e1f-deecb5be69d9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 61192,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "Coppel ",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Coppel",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "reportFilename": "Coppel "
+      },
+      "version": "6.2.0"
+    }
+  }
+}
